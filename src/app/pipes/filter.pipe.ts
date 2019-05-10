@@ -14,6 +14,7 @@ export class FilterPipe implements PipeTransform {
       */
 
   transform(value: any, arg: any): any {
+    /**Validates if the data comes empty */
     if (arg === "" || arg.length < 2) { return value;}
 
     const resultReviews = [];
