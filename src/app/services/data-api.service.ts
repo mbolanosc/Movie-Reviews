@@ -37,9 +37,16 @@ export class DataApiService {
    * param movieName : string : the api doc does not have any method to get a detail by id, only by movie name.
    * ## TODO not working
    */
-  getReviewDetailByMovieName(movieName: string) {
+  /*getReviewDetailByMovieName(movieName: string) {
     const api_key = this.api_key;
     const path_url = `https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=${movieName}&api-key=${api_key}`;
+    return (this.review = this.http.get(path_url));
+
+}*/
+
+  getReviewDetailByMovieName(titleName):Observable<any>{
+    const api_key = this.api_key;
+    const path_url = `https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=${titleName}&api-key=${api_key}`;
     return (this.review = this.http.get(path_url));
 
   }
