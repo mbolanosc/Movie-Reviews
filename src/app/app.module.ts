@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { NgxSpinnerModule } from 'ngx-spinner';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -13,6 +14,8 @@ import { FormsModule } from '@angular/forms';
 
 //@Services 
 import { DataApiService } from './services/data-api.service';
+
+//@Pipes 
 import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
@@ -28,7 +31,8 @@ import { FilterPipe } from './pipes/filter.pipe';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgxSpinnerModule
   ],
   providers: [DataApiService],
   bootstrap: [AppComponent]
