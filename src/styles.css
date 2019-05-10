@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.container {
+    margin-top: 100px;
+}
+
+#list-books {
+    background: #ededed;
+    border-radius: 1em;
+}
+
+.cards-reviews #card {
+    border: none;
+    /*padding: 10px !important;*/
+}
+
+.cards-reviews {
+    min-height: 300px;
+    border-bottom-width: 20px !important;
+}
+
+.card-title,
+.card-text {
+    min-height: 50px !important;
+}
+
+.card-title {
+    color: #003863 !important;
+}
