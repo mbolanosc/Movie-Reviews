@@ -31,3 +31,7 @@
 .card-title {
     color: #003863 !important;
 }
+
+.detail-card .card-img {
+    height: 100%;
+}

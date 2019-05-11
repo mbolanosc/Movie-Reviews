@@ -14,7 +14,11 @@
                     <img class="card-img-top img-fluid " src="{{ review.multimedia.src }} " alt="Card image cap ">
                     <div class="card-body text-center ">
                         <h5 class="card-title ">{{ review.display_title }}</h5>
-                        <p class="card-text"> Opening date: {{ review.opening_date }}
+                        <p class="card-text" *ngIf="review.opening_date"> Opening date: {{ review.opening_date }}
+                            <br>
+                            <span class="badge badge-pill badge-warning " *ngIf="( review.critics_pick==1 ) ">Critics pick!</span>
+                        </p>
+                        <p class="card-text" *ngIf="!review.opening_date"> Opening date: No opening date yet.
                             <br>
                             <span class="badge badge-pill badge-warning " *ngIf="( review.critics_pick==1 ) ">Critics pick!</span>
                         </p>
