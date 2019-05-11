@@ -23,7 +23,8 @@ export class ReviewComponent implements OnInit {
 
   /**
    * Method loadReviewDetail
-   * API does not have any endpoint with an ID for the detail of each review!
+   * API does not have any end point with an ID for the detail of each review!
+   * https://developer.nytimes.com/docs/movie-reviews-api/1/overview
    * Gets Param from Route.
    * Process to do a match from the request data and the param.
    */
