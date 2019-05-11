@@ -8,7 +8,7 @@ import { NgxSpinnerService } from 'ngx-spinner';
 })
 
 export class AppComponent implements OnInit{
-  title = 'Movie Review API';
+  title = 'cecropia-test';
 
   constructor(
     private spinner: NgxSpinnerService
