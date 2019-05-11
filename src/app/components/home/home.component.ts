@@ -27,10 +27,9 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.getListReviews();
   }
-  
+
   getListReviews() {
     this.dataApi.getReviews().subscribe(({ results }: ReviewInterface) => this.reviews = results);
-    this.dataApi.getReviews().subscribe(({ results }: ReviewInterface) => console.log('##results ', results));
   }
-  
+
 }

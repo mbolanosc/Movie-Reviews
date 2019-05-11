@@ -8,7 +8,7 @@
         </div>
     </div>
     <div class="row ">
-        <div class="col-xs-12 col-sm-6 col-md-4 " *ngFor="let review of reviews | filter:filterReview ">
+        <div class="col-xs-12 col-sm-6 col-md-4 " *ngFor="let review of reviews | filter:filterReview; index as i ">
             <div class="cards-reviews ">
                 <div class="card ">
                     <img class="card-img-top img-fluid " src="{{ review.multimedia.src }} " alt="Card image cap ">
@@ -20,9 +20,9 @@
                         </p>
                         <p class="card-text" *ngIf="!review.opening_date"> Opening date: No opening date yet.
                             <br>
-                            <span class="badge badge-pill badge-warning " *ngIf="( review.critics_pick==1 ) ">Critics pick!</span>
+                            <span class="badge badge-pill badge-warning " *ngIf="( review.critics_pick ==1 ) ">Critics pick!</span>
                         </p>
-                        <button type="button " class="btn btn-primary " [routerLink]=" ['/review/',review.display_title]"> Read More </button>
+                        <button type="button " class="btn btn-primary " [routerLink]=" ['/review/',i]"> Read More </button>
                     </div>
                 </div>
                 <br>
