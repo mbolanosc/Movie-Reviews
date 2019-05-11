@@ -10,7 +10,7 @@ import { ReviewInterface } from '../../models/review-interface';
 })
 export class ReviewComponent implements OnInit {
   public reviews: Object[];
-  public detailInfo: Object[];
+  public detailInfo: any;
 
   constructor(
     private route: ActivatedRoute,
