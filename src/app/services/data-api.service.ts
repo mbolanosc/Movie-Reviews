@@ -6,6 +6,7 @@ import { ReviewInterface } from '../models/review-interface';
 @Injectable({
   providedIn: 'root'
 })
+
 export class DataApiService {
   constructor(private http: HttpClient) {}
 /*
@@ -13,8 +14,8 @@ export class DataApiService {
     reviews type any -> list.
     review type any -> detail.
   */
-  reviews: Observable<any>
-  review: Observable<any>
+  reviews: Observable<any>;
+  review: Observable<any>;
 
 
   /**
@@ -24,7 +25,6 @@ export class DataApiService {
 
   /**
    * 1. Method to get all the reviews
-   * #TODO get reviews.results array for *ngFor UI.
    */
   getReviews() {
     const api_key = this.api_key;

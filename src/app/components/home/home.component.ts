@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataApiService } from '../../services/data-api.service';
 import { ReviewInterface } from '../../models/review-interface';
-import { Router } from '@angular/router';
-
-
 
 @Component({
   selector: 'app-home',
@@ -28,6 +25,9 @@ export class HomeComponent implements OnInit {
     this.getListReviews();
   }
 
+  /**
+   * Method to call the service to get the reviews.
+   */
   getListReviews() {
     this.dataApi.getReviews().subscribe(({ results }: ReviewInterface) => this.reviews = results);
   }
